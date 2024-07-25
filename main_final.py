@@ -48,7 +48,12 @@ chain = RetrievalQA.from_chain_type(
     chain_type="stuff"
 )
 
+# while True:
+#     humaninput = input(">> ")
+#     result = chain.invoke(humaninput)   
+#     print(result['result'])
+
 while True:
     humaninput = input(">> ")
-    result = chain.invoke(humaninput)   
-    print(result['result'])
+    result = humaninput    
+    print(result)
