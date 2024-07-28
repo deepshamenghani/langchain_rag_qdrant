@@ -9,7 +9,7 @@ import os
 import dotenv
 
 dotenv.load_dotenv()
-llmclient = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API"))
+llmclient = ChatOpenAI(openai_api_key=os.getenv("OPENAI_API")) # additional parameters to try: model_name="gpt-4", temperature=0.2, max_tokens=100
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API"))
 
 text_splitter = CharacterTextSplitter(separator="\n", chunk_size=200, chunk_overlap=0)
